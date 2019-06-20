@@ -7,7 +7,7 @@
 		<link href="https://fonts.googleapis.com/css?family=Nova+Square" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="styles/challenge2-xt2.css">
 		<script type="text/javascript">
-			
+		//De klok
 			var now = new Date();
 			var hours = now.getHours();
 			var pic1 = 'images/moon.svg';
@@ -24,6 +24,7 @@
 			    document.write ('<div #grid-container style="background: linear-gradient(to bottom, #0A0A0A 0%, #871591 100%);">');
 			    //Hiermee wordt de kleur van de klok(de cijfers) dat hoort bij de tijds interval 18:00 tot 00:00 weergeven
 			    document.write ('<div .clock style="color: #D436FC;">');
+			    //Deze code zorgt ervoor dat je een maan ziet bij dit dagdeel
 			    document.write("<img src=\"" + pic1 + "\" class=\"moon\">");
 			}
 
@@ -32,6 +33,7 @@
 			    document.write ('<div #grid-container style="background: linear-gradient(to bottom, #C58BAB 0%, #FCD53F 100%);">');
 			    //Hiermee wordt de kleur van de klok(de cijfers) dat hoort bij de tijds interval 16:00 tot 18:00 weergeven
 			    document.write ('<div .clock style="color: #F1A129;">');
+			    //Deze code zorgt ervoor dat je een laagstaande zon ziet bij dit dagdeel
 			    document.write("<img src=\"" + pic2 + "\" class=\"laagstaande-sun\">");
 			}
 
@@ -40,6 +42,7 @@
 			    document.write ('<div #grid-container style="background: linear-gradient(to bottom, #00ccff 0%, #ffffff 100%);">');
 			    //Hiermee wordt de kleur van de klok(de cijfers) dat hoort bij de tijds interval 13:00 tot 17:00 weergeven
 			    document.write ('<div .clock style="color: #55D6F9;">');
+			    //Deze code zorgt ervoor dat je een zon ziet bij dit dagdeel
 			    document.write("<img src=\"" + pic3 + "\" class=\"sun\">");
 			}
 			        
@@ -48,12 +51,14 @@
 			    document.write ('<div #grid-container style="background: linear-gradient(to bottom, #00ccff 0%, #EFD199 100%);">');
 			    //Hiermee wordt de kleur van de klok(de cijfers) dat hoort bij de tijds interval 06:00 tot 13:00 weergeven
 			    document.write ('<div .clock style="color: #FECA29;">');
+			    //Deze code zorgt ervoor dat je een laagstaande zon ziet bij dit dagdeel
 			    document.write("<img src=\"" + pic2 + "\" class=\"laagstaande-sun\">");
 			}
 			    //Hiermee wordt de achtergrond kleur dat hoort bij de tijds interval 00:00 tot 06:00 weergeven
 			else if (hours >=0 && hours < 7){
 			    document.write ('<div #grid-container style="background: linear-gradient(to bottom, #0A0A0A 0%, #871591 100%);">');
 			    document.write ('<div .clock style="color: #D436FC;">');
+			    //Deze code zorgt ervoor dat je een laagstaande maan ziet bij dit dagdeel
 			  	document.write ("<img src=\"" + pic1 + "\" class=\"moon\">");
 			}
 			else {
@@ -61,20 +66,26 @@
 			    document.write ('<div .clock style="color: white;">');
 			    document.write("<img src=\"" + pic1 + "\" class=\"moon\">");
 			}
-
 	</script>
 	</head>
-	<body>
+	<body> 
+	    <!--De css grid-->
 	    <div id="grid-container">
 		    <header>
+		    <!--Het logo van spaceX-->
 				<picture class="logo"><img src="images/spacex.svg"></picture>
 			</header>
-			<section>
+			<section>s
+			<!--De foto's van de maan, de zon en de laagstaande zon die per dagdeel worden geladen-->
 				<picture><img class="moon" class="sun" class="laagstaande-sun"></picture>
-				<picture><img class="wolken" class="wolk1" src="images/wolk1.svg"></picture>
-				<picture><img class="wolken" class="wolk2" src="images/wolk2.svg"></picture>
+				<!--De eerst wolk-->
+				<picture><img class="wolk1" src="images/wolk1.svg"></picture>
+				<!--De tweede wolk-->
+				<picture><img  class="wolk2"  src="images/wolk2.svg"></picture>
 			</section>
+			<!--De grijze box met hierin de klok-->
 	    	<div class="klok-achtergrond">
+	    	<!--De klok-->
 	    		<div id="MyClockDisplay" class="clock"></div>
 	    	</div>
 	    </div>

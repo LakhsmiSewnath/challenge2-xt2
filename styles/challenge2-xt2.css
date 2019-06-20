@@ -1,3 +1,5 @@
+
+
 body {
 	margin: 0px;
 }
@@ -7,13 +9,13 @@ header {
 	display: flex;
 }
 
-
+/*Styling logo*/
 .logo {
 	align-self: center;
 	margin: auto;
 }
 
-
+/*Styling klok*/
 .clock {
 	align-self: center;
 	margin: auto;
@@ -21,15 +23,12 @@ header {
     font-family: 'Nova Square', cursive;
 }
 
+/*Styling grijze achtergrond klok*/
 .klok-achtergrond {
 	background-color: #2C2C2C;
 	display: flex;
 	grid-area: klok;
 	margin-bottom: 0%;
-	}
-
-.wolken {
-	   opacity: 0.2;
 	}
 
 
@@ -43,6 +42,7 @@ header {
 		grid-template-areas: "header" "section" "klok";
 		height: calc(100vh);
 	}
+
 	header {
 		grid-area: header;
 	}
@@ -54,43 +54,59 @@ header {
 	}
 
 
-
+	/*Styling logo*/
 	.logo {
 		width: 200px;
 	}
 
-
+	/*Styling laagstaande zon*/
 	.laagstaande-sun {
-		width: 200px;
+		width: 300px;
 		position: absolute;
 		z-index: 10;
 	}
-
-	.wolken {
-	   width: 200px;
-	   z-index: 1;
+	
+	/*Styling geld voor eerste wolk*/
+	.wolk1 {
+		width: 200px;
+		z-index: 1;
+		margin-left: 10%;
 	}
 
-
+	/*Styling geld voor tweede wolk*/
 	.wolk2 {
-		margin-left: 30%;
+		width: 200px;
+		z-index: 1;
+		margin-left: 40%;
 	}
 
+
+	/*Styling zon*/
 	.sun {
 	  width: 200px;
+	  margin-top: 30%;
+	  margin-left: 21%;
 	  position: absolute;
 	  z-index: 10;
 	}
 
+	/*Styling maan*/
 	.moon {
 		width: 200px;
+		margin-top: 30%;
 		position: absolute;
 		z-index: 10;
 	}
 }
 
 @media screen and (min-width: 768px) {
-  
+
+  	#grid-container {
+	    grid-template-columns: 1fr;
+	    grid-template-rows: 3fr 15fr 4fr;
+		grid-template-areas: "header" "section" "klok";
+	}
+
 	.logo {
 		width: 300px;
 	}
@@ -105,8 +121,19 @@ header {
 	    margin-left: 22%;
 	}
 
-	.wolken {
-	   width: 350px;
+
+	/*Styling geld voor eerste wolk*/
+	.wolk1 {
+		width: 350px;
+		z-index: 1;
+		margin-left: 10%;
+	}
+
+	/*Styling geld voor tweede wolk*/
+	.wolk2 {
+		width: 350px;
+		z-index: 1;
+		margin-left: 40%;
 	}
 
 	.sun {
@@ -124,6 +151,11 @@ header {
 
 @media screen and (min-width: 1366px) {
 
+	#grid-container {
+	    grid-template-columns: 1fr;
+	    grid-template-rows: 3fr 10fr 4fr;
+	}
+
 	.logo {
 		width: 350px;
 	}
@@ -133,53 +165,77 @@ header {
 	}
 
 	.laagstaande-sun {
-		width: 450px;
+		width: 300px;
 		margin-left: 28%;
 	}
 
-	.wolken {
-	   width: 450px;
+		/*Styling geld voor eerste wolk*/
+	.wolk1 {
+		width: 250px;
+		z-index: 1;
+		margin-left: 25%;
+	}
+
+	/*Styling geld voor tweede wolk*/
+	.wolk2 {
+		width: 250px;
+		z-index: 1;
+		margin-left: 50%;
 	}
 
 	.sun {
-	  width: 450px;
-	  margin-left: 28%;
+	  width: 300px;
+	  margin-left: 38%;
+	  margin-top: 15%;
 	}
 
 	.moon {
-		width: 450px;
-		margin-left: 28%;
+		width: 300px;
+		margin-left: 37%;
+		margin-top: 17%;
 	}
-
 }
 
 @media screen and (min-width: 1926px) {
+
+	#grid-container {
+	    grid-template-columns: 1fr;
+	    grid-template-rows: 2fr 10fr 4fr;
+	}
 
 	.logo {
 		width: 400px;
 	}
 
 	.clock {
-    font-size: 90px;
+    font-size: 94px;
 	}
 
 	.laagstaande-sun {
-		width: 600px;
-		margin-left: 30%;
+		width: 500px;
 	}
 
-	.wolken {
-	   width: 600px;
+	
+
+	.wolk1 {
+		width: 450px;
+		z-index: 1;
+		margin-left: 25%;
+	}
+
+	/*Styling geld voor tweede wolk*/
+	.wolk2 {
+		width: 450px;
+		z-index: 1;
+		margin-left: 50%;
 	}
 
 	.sun {
 	  width: 500px;
-	  margin-left: 30%;
 	}
 
 	.moon {
-		width: 600px;
-		margin-left: 30%;
+		width: 500px;
 	}
 
 }
